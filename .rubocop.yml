@@ -1,0 +1,17 @@
+plugins:
+  - rubocop-rails
+
+AllCops:
+  NewCops: enable
+  ParserEngine: parser_prism
+  Exclude:
+    - 'bin/*'
+    - 'db/*'
+    - 'node_modules/**/*'
+    - '**/*.erb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

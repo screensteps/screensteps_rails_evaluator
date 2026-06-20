@@ -1,0 +1,27 @@
+en:
+  activerecord:
+    attributes:
+      account:
+        domain: Sitename
+      space:
+        allow_ratings: Ratings
+    errors:
+      models:
+        manual:
+          attributes:
+            permalink:
+              invalid: 'must start with a letter and can only contain alpha-numeric characters, underscores or dashes'
+              taken: 'is already assigned to a manual'
+        space:
+          attributes:
+            permalink:
+              invalid: 'must start with a letter and can only contain alpha-numeric characters, underscores or dashes'
+              taken: 'is already assigned to a site'
+        user:
+          attributes:
+            first_name:
+              invalid: 'is invalid'
+            last_name:
+              invalid: 'is invalid'
+            role:
+              inclusion: 'is an invalid role'

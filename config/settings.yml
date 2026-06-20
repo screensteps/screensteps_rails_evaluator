@@ -1,0 +1,11 @@
+shared:
+  help_host: 'help.screensteps.com'
+
+production:
+  host: screenstepslive.com
+
+development:
+  host: screenstepslive.localhost
+
+test:
+  host: screenstepslive.localhost
