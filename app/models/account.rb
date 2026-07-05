@@ -30,7 +30,6 @@ class Account < ApplicationRecord
   before_create :downcase_domain_name
   before_destroy :approve_destroy, prepend: true
 
-  scope :expired,             -> { where(trial_expires_at: (...Time.zone.today)) }
   scope :all_active_accounts, -> { where(status: ACTIVE_ACCOUNT_STATUS) }
 
   def to_s         = company

@@ -112,4 +112,10 @@ spaces.each do |account, space_defs|
   end
 end
 
+Space.find_or_create_by!(account: acme, permalink: 'gamma') do |s|
+  s.title     = "Gamma Site"
+  s.protected = true
+  s.language  = "fr"
+end
+
 puts "Seeded #{Account.count} accounts, #{User.count} users, #{Space.count} spaces, #{Manual.count} manuals."

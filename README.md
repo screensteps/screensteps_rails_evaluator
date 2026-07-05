@@ -35,8 +35,9 @@ bundle exec rspec
 
 ### ActiveRecord queries
 Seed the database with the seeds.rb file, then from the Rails console:
-- [ ] Find all Manuals that have a title of "Work in Progress".
 - [ ] Find all Spaces that contain a manual with the title "Work in Progress".
+- [ ] Find all Spaces that have no manuals linked to them.
+- [ ] Utilize the Account scope named "all_active_accounts" to find all manuals linked to an active account.
 - [ ] Find the first User with a first_name of "Acme" and a last_name not equal to "Admin".
 
 ### Routing
