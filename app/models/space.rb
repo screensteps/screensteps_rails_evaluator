@@ -73,12 +73,10 @@ class Space < ApplicationRecord
   end
 
   def clone_space(params = {})
-    new_attrs = attributes.with_indifferent_access.merge(
-      { domain: nil },
-      params,
-      { id: nil, authentication_endpoint_id: nil, permalink: nil,
-        host_mapping: nil, logo_id: nil, favicon_id: nil, cloning: true }
-    )
+    new_attrs = attributes.with_indifferent_access.merge({ domain: nil })
+                          .merge(params)
+                          .merge({ id: nil, authentication_endpoint_id: nil, permalink: nil,
+                                   host_mapping: nil, logo_id: nil, favicon_id: nil, cloning: true })
     new_space = account.spaces.build(new_attrs)
     new_space.title = "#{title} (copy)" if params[:title].blank?
 
