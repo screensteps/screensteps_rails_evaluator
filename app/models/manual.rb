@@ -4,7 +4,7 @@ class Manual < ApplicationRecord
   UNCATEGORIZED_TITLE = 'Uncategorized'.freeze
   SPACE_ATTRIBUTES    = %w[draft title permalink restricted icon].freeze
 
-  normalizes :permalink, with: -> { it.presence }
+  normalizes :permalink, with: -> { _1.presence }
 
   belongs_to :creator, class_name: 'User', optional: true
   belongs_to :space

@@ -5,8 +5,8 @@ class Space < ApplicationRecord
 
   store_accessor :data, :colors, :site_strings, :site_settings
 
-  normalizes :host_mapping, with: -> { it.downcase.presence }
-  normalizes :permalink, with: -> { it.presence }
+  normalizes :host_mapping, with: -> { _1.downcase.presence }
+  normalizes :permalink, with: -> { _1.presence }
 
   belongs_to :account
 

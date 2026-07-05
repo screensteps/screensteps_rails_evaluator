@@ -6,8 +6,8 @@ class User < ApplicationRecord
 
   search_text_scope %i[name login email]
 
-  normalizes :first_name, :last_name, with: -> { it.presence }
-  normalizes :role, with: -> { it.downcase.presence }
+  normalizes :first_name, :last_name, with: -> { _1.presence }
+  normalizes :role, with: -> { _1.downcase.presence }
 
   ROLE_ADMIN       = 'admin'.freeze
   ROLE_EDITOR      = 'editor'.freeze

@@ -4,7 +4,7 @@ A Rails application used as a candidate skills assessment project. It provides a
 
 ## Prerequisites
 
-- **Ruby** 3.4+
+- **Ruby** 3.3+
 - **SQLite** 3.31+
 
 ## Models
